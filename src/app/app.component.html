@@ -3,6 +3,8 @@
  <app-add-task (Task)="handleTaskEvent($event)"></app-add-task>
 
   <ul>
-    <li></li>
+    <li>
+      <app-task-list [taskList]="tasks"></app-task-list>
+    </li>
   </ul>
 </div>
