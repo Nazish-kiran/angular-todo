@@ -9,4 +9,8 @@ import { AddTaskComponent } from './add-task/add-task.component';
 })
 export class AppComponent {
   title = 'second';
+
+  handleTaskEvent(task : string){
+    console.log("Task added");
+  }
 }

@@ -1,1 +1,8 @@
-<app-add-task></app-add-task>
+<div class="task-container">
+  <h2>Add a Task</h2>
+ <app-add-task (Task)="handleTaskEvent($event)"></app-add-task>
+
+  <ul>
+    <li></li>
+  </ul>
+</div>
