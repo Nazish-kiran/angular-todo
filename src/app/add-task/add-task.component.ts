@@ -1,5 +1,6 @@
 import { Component , EventEmitter , Output } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+
 @Component({
   selector: 'app-add-task',
   imports: [FormsModule],
@@ -12,7 +13,9 @@ export class AddTaskComponent {
   Tasks: string = '' ;
 
 addTask(){
-  this.Task.emit(this.Tasks);
-  this.Tasks = '';
+ if (this.Tasks.trim()) {
+      this.Task.emit(this.Tasks); // Send task to parent
+      this.Tasks = ''; // Clear input after adding
+    }
 }
 }
